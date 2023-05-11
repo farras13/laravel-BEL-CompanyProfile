@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class PaketModel extends Model
+class TrackModel extends Model
 {
-    protected $table = 'package';
+    protected $table = 'package_trace';
     protected $primaryKey = 'id';
 
     public function paket()
     {
-        return $this->hasMany(TrackModel::class, 'id', 'package_id');
+        return $this->belongsTo(PaketModel::class, 'package_id', 'id');
     }
 }

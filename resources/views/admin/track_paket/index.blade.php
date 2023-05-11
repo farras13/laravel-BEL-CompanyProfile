@@ -1,15 +1,15 @@
-@extends('layout.admin')
+@extends('layouts.admin')
 @section('content')
 <div class="row">
   <div class="col-12">
     <div class="card">
-      <div class="card-header" style="background-color:#39b54a">
+      <div class="card-header" style="background-color:#75A0DC">
         <div class="row">
           <div class="text-left col-8">
             <h2 style="color: white">Data Track Paket</h2>
           </div>
           <div class="text-right col-4">
-            <a href="{{url('add-track_paket')}}"><button class="btn btn-primary" style="background-color: #f1592a">+
+            <a href="{{url('add-track_paket')}}"><button class="btn btn-primary">+
                 Tambah
                 Track Paket</button></a>
           </div>
@@ -31,7 +31,7 @@
             @foreach ($track_paket as $row)
             <tr>
               <td>{{$loop->iteration}}</td>
-              <td>{{$row->no_resi}}</td>
+              <td>{{$row->paket->no_resi}}</td>
               <td>
                 {{$row->status}}
               </td>

@@ -38,3 +38,10 @@ route::post('/save-paket', [App\Http\Controllers\PaketController::class, 'store'
 route::get('/edit-paket/{id}', [App\Http\Controllers\PaketController::class, 'edit']);
 route::post('/update-paket', [App\Http\Controllers\PaketController::class, 'update']);
 route::post('/delete-paket', [App\Http\Controllers\PaketController::class, 'destroy']);
+
+route::get('/track_paket', [App\Http\Controllers\TrackController::class, 'index']);
+route::get('/add-track_paket', [App\Http\Controllers\TrackController::class, 'create']);
+route::post('/save-track_paket', [App\Http\Controllers\TrackController::class, 'store']);
+route::get('/edit-track_paket/{id}', [App\Http\Controllers\TrackController::class, 'edit']);
+route::post('/update-track_paket', [App\Http\Controllers\TrackController::class, 'update']);
+route::post('/delete-track_paket', [App\Http\Controllers\TrackController::class, 'destroy']);
