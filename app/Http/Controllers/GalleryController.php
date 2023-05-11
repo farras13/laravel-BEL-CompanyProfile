@@ -16,7 +16,7 @@ class GalleryController extends Controller
             ];
             return view('admin.galeri.index', $data);
         } else {
-            return view('pages.index');
+            return view('home');
         }
     }
     public function create()
@@ -24,7 +24,7 @@ class GalleryController extends Controller
         if (auth()->user()->id) {
             return view('admin.galeri.create');
         } else {
-            return view('pages.index');
+            return view('home');
         }
     }
     public function store(Request $request)
@@ -54,7 +54,7 @@ class GalleryController extends Controller
             ];
             return view("admin.galeri.edit", $data);
         } else {
-            return view('pages.index');
+            return view('home');
         }
     }
     public function update(Request $request)
@@ -75,7 +75,6 @@ class GalleryController extends Controller
     {
         $id = $request->id;
         $galeri = GaleriModel::find($id);
-
         $galeri->delete();
 
         return redirect('galeri');

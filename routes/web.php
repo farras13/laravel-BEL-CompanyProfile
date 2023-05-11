@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\DashboardController::class, 'index']);
 Route::get('/home', [App\Http\Controllers\DashboardController::class, 'index'])->name('home');
+Route::post('/track', [App\Http\Controllers\DashboardController::class, 'track']);
 
 
 
@@ -45,3 +46,10 @@ route::post('/save-track_paket', [App\Http\Controllers\TrackController::class, '
 route::get('/edit-track_paket/{id}', [App\Http\Controllers\TrackController::class, 'edit']);
 route::post('/update-track_paket', [App\Http\Controllers\TrackController::class, 'update']);
 route::post('/delete-track_paket', [App\Http\Controllers\TrackController::class, 'destroy']);
+
+route::get('/client', [App\Http\Controllers\ClientController::class, 'index']);
+route::get('/add-client', [App\Http\Controllers\ClientController::class, 'create']);
+route::post('save-client', [App\Http\Controllers\ClientController::class, 'store']);
+route::get('edit-client/{id}', [App\Http\Controllers\ClientController::class, 'edit']);
+route::post('update-client', [App\Http\Controllers\ClientController::class, 'update']);
+route::post('/delete-client', [App\Http\Controllers\ClientController::class, 'destroy']);

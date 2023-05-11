@@ -81,14 +81,14 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{url('/artikel')}}">
-                <i class="ni ni-planet text-orange"></i>
-                <span class="nav-link-text">Artikel</span>
+              <a class="nav-link" href="{{url('/client')}}">
+                <i class="ni ni-pin-3 text-orange"></i>
+                <span class="nav-link-text">Client</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{url('/galeri')}}">
-                <i class="ni ni-pin-3 text-primary"></i>
+                <i class="ni ni-planet  text-primary"></i>
                 <span class="nav-link-text">Galeri</span>
               </a>
             </li>

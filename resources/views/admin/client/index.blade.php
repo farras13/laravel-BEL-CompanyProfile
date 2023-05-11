@@ -6,10 +6,10 @@
                 <div class="card-header" style="background-color:#75A0DC">
                     <div class="row">
                         <div class="text-left col-8">
-                            <h2 style="color: white">Data galeri</h2>
+                            <h2 style="color: white">Data Client</h2>
                         </div>
                         <div class="text-right col-4 ">
-                            <a href="{{url('add-galeri')}}"><button class="btn btn-primary">+ Tambah galeri</button></a>
+                            <a href="{{url('add-client')}}"><button class="btn btn-primary">+ Tambah Client</button></a>
                         </div>
                     </div>
                 </div>
@@ -18,32 +18,28 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Judul</th>
-                                <th>Gambar</th>
-                                <th>Uploader</th>
+                                <th>Gambar</th>                                <
                                 <th>Tanggal Upload</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($galeri as $row)
+                            @foreach ($client as $row)
                                 <tr>
                                     <td>{{$loop->iteration}}</td>
-                                    <td>{{$row->judul}}</td>
                                     <td>
-                                        <img src="{{url('image/galeri/'.$row->gambar)}}" class="img-thumbnail" alt="">
+                                        <img src="{{url('image/client/'.$row->images)}}" class="img-thumbnail" alt="">
                                     </td>
-                                    <td>{{$row->name}}</td>
-                                    <td>{{ date_format(date_create($row->date),"d F Y")}}</td>
+                                    <td>{{ date_format(date_create($row->created_at),"d F Y")}}</td>
                                     <td>
                                         <div class="d-flex order-actions">
-                                            <form action="edit-galeri/{{$row->id_galeri}}" method="get">
+                                            <form action="edit-client/{{$row->id}}" method="get">
                                                 <button type="submit" class="btn btn-sm btn-outline-primary"><i class="ni ni-ruler-pencil text-black"></i>Edit
                                                 </button>
                                             </form>
-                                            <form action="{{url('delete-galeri')}}" method="POST" id="hapus_{{$loop->iteration}}">
+                                            <form action="{{url('delete-client')}}" method="POST" id="hapus_{{$loop->iteration}}">
                                                 @csrf
-                                                <input type="hidden" name="id" value="{{$row->id_galeri}}">
+                                                <input type="hidden" name="id" value="{{$row->id}}">
                                                 <button id="hapus" type="button" value="{{$loop->iteration}}" class="hapus btn btn-sm btn-outline-danger">X Hapus</button>
                                             </form>
                                         </div>

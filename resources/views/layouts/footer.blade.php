@@ -7,10 +7,10 @@
                     <h3>BEL</h3>
                     <p>
                         jln Bangka Raya Nomor 53B, Kel. Pela Mampang<br>
-                        Kecamatan Mampang Prapatan, Jakarta Utara <br>
+                        Kecamatan Mampang Prapatan, Jakarta Selatan <br>
                         Indonesia <br><br>
-                        <strong>Phone:</strong> +62 8589 55488<br>
-                        <strong>Email:</strong> info@bel.com<br>
+                        <strong>Phone:</strong> +62 823 234 445 66<br>
+                        <strong>Email:</strong> berkahekspressindologistik@gmail.com<br>
                     </p>
                 </div>
 

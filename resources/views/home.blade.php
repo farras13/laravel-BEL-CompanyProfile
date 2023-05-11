@@ -10,34 +10,34 @@
                 <!-- Slide 1 -->
                 <div class="carousel-item active" style="background-image: url({{ asset('assets/images/BANNER-1.jpg') }});">
                     <!-- <div class="carousel-container">
-                                                                <div class="carousel-content animate__animated animate__fadeInUp">
-                                                                  <h2>Welcome to <span>BEL</span></h2>
-                                                                  <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                                                                  <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
-                                                                </div>
-                                                              </div> -->
+                                                                                    <div class="carousel-content animate__animated animate__fadeInUp">
+                                                                                      <h2>Welcome to <span>BEL</span></h2>
+                                                                                      <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                                                                                      <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
+                                                                                    </div>
+                                                                                  </div> -->
                 </div>
 
                 <!-- Slide 2 -->
                 <div class="carousel-item" style="background-image: url({{ asset('assets/images/BANNER-2.jpg') }});">
                     <!-- <div class="carousel-container">
-                                                                <div class="carousel-content animate__animated animate__fadeInUp">
-                                                                  <h2>Lorem Ipsum Dolor</h2>
-                                                                  <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                                                                  <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
-                                                                </div>
-                                                              </div> -->
+                                                                                    <div class="carousel-content animate__animated animate__fadeInUp">
+                                                                                      <h2>Lorem Ipsum Dolor</h2>
+                                                                                      <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                                                                                      <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
+                                                                                    </div>
+                                                                                  </div> -->
                 </div>
 
                 <!-- Slide 3 -->
                 <div class="carousel-item" style="background-image: url({{ asset('assets/images/BANNER-3.jpg') }});">
                     <!-- <div class="carousel-container">
-                                                                <div class="carousel-content animate__animated animate__fadeInUp">
-                                                                  <h2>Sequi ea ut et est quaerat</h2>
-                                                                  <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                                                                  <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
-                                                                </div>
-                                                              </div> -->
+                                                                                    <div class="carousel-content animate__animated animate__fadeInUp">
+                                                                                      <h2>Sequi ea ut et est quaerat</h2>
+                                                                                      <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                                                                                      <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
+                                                                                    </div>
+                                                                                  </div> -->
                 </div>
 
             </div>
@@ -105,17 +105,19 @@
                 </div>
                 <div class="row mt-2 justify-content-center" data-aos="fade-up">
                     <div class="col-lg-10">
-                        <form action="track" method="post" role="form" class="php-email-form">
-                            @csrf
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Masukkan No. Resi"
-                                    aria-label="Masukkan No. Resi" aria-describedby="basic-addon2" name="no_resi">
-                                <div class="input-group-append">
-                                    <button type="submit" class="btn input-group-text" id="basic-addon2"
-                                        style="background-color: #052DA3; color: #ffffff;">Lacak</span>
+                        <div class="col-lg-12 col-md-6 footer-newsletter">
+                            <form action="{{ url('track') }}" method="post">
+                                @csrf
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Masukkan No. Resi"
+                                        aria-label="Masukkan No. Resi" aria-describedby="basic-addon2" name="no_resi">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-primary input-group-text" id="basic-addon2"
+                                            style="color: #ffffff;">Lacak</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
 
                 </div>
@@ -249,24 +251,16 @@
                     <div class="col-lg-12">
                         <div class="portfolio-details-slider swiper">
                             <div class="swiper-wrapper align-items-center">
-
-                                <div class="swiper-slide">
-                                    <img src="{{ asset('assets/images/BANNER-1.jpg') }}" alt="">
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="{{ asset('assets/images/BANNER-2.jpg') }}" alt="">
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <img src="{{ asset('assets/images/BANNER-3.jpg') }}" alt="">
-                                </div>
-
+                                @foreach ($gallery as $g)
+                                    <div class="swiper-slide">
+                                        <img src="{{ url('image/galeri/' . $g->gambar) }}" alt="">
+                                    </div>
+                                @endforeach
                             </div>
                             <div class="swiper-pagination"></div>
                             <!-- <div class="text-center">
-                                                                    <a href="#" class="btn btn-read-more-gallery">Read More</a>
-                                                                  </div> -->
+                                                                                        <a href="#" class="btn btn-read-more-gallery">Read More</a>
+                                                                                      </div> -->
                         </div>
                     </div>
                 </div>
@@ -283,54 +277,14 @@
                 </div>
 
                 <div class="row no-gutters clients-wrap clearfix" data-aos="fade-up">
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <div class="client-logo">
-                            <img src="{{ asset('assets/img/clients/client-1.png') }}" class="img-fluid" alt="">
+                    @foreach ($clients as $client)
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <div class="client-logo">
+                                <img src="{{ url('image/client/' . $client->images) }}" class="img-fluid" alt="">
+                            </div>
                         </div>
-                    </div>
+                    @endforeach
 
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <div class="client-logo">
-                            <img src="{{ asset('assets/img/clients/client-2.png') }}" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <div class="client-logo">
-                            <img src="{{ asset('assets/img/clients/client-3.png') }}" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <div class="client-logo">
-                            <img src="{{ asset('assets/img/clients/client-4.png') }}" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <div class="client-logo">
-                            <img src="{{ asset('assets/img/clients/client-5.png') }}" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <div class="client-logo">
-                            <img src="{{ asset('assets/img/clients/client-6.png') }}" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <div class="client-logo">
-                            <img src="{{ asset('assets/img/clients/client-7.png') }}" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <div class="client-logo">
-                            <img src="{{ asset('assets/img/clients/client-8.png') }}" class="img-fluid" alt="">
-                        </div>
-                    </div>
 
                 </div>
 
@@ -358,20 +312,20 @@
                                     <i class="bi bi-geo-alt"></i>
                                     <h4>Location:</h4>
                                     <p>jln Bangka Raya Nomor 53B, Kel. Pela Mampang ,
-                                        Kec. Mampang Prapatan, Jakarta Utara ,
+                                        Kec. Mampang Prapatan, Jakarta Selatan ,
                                         Indonesia</p>
                                 </div>
 
                                 <div class="col-lg-4 info mt-4 mt-lg-0">
                                     <i class="bi bi-envelope"></i>
                                     <h4>Email:</h4>
-                                    <p>info@bel.com<br>contact@bel.com</p>
+                                    <p>berkahekspressindologistik@gmail.com</p>
                                 </div>
 
                                 <div class="col-lg-4 info mt-4 mt-lg-0">
                                     <i class="bi bi-phone"></i>
                                     <h4>Call:</h4>
-                                    <p>+62 8589 55488</p>
+                                    <p>+62 823 234 445 66</p>
                                 </div>
                             </div>
                         </div>
