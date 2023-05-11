@@ -22,4 +22,11 @@ Route::get('/home', [App\Http\Controllers\DashboardController::class, 'index'])-
 
 Auth::routes();
 
-Route::get('/dashboard-admin', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+Route::get('/dashboard-admin', [App\Http\Controllers\HomeController::class, 'index'])->name('admin');
+
+route::get('/galeri', [App\Http\Controllers\GalleryController::class, 'index']);
+route::get('/add-galeri', [App\Http\Controllers\GalleryController::class, 'create']);
+route::post('/save-galeri', [App\Http\Controllers\GalleryController::class, 'store']);
+route::get('/edit-galeri/{id}', [App\Http\Controllers\GalleryController::class, 'edit']);
+route::post('/update-galeri', [App\Http\Controllers\GalleryController::class, 'update']);
+route::post('/delete-galeri', [App\Http\Controllers\GalleryController::class, 'destroy']);
