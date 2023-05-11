@@ -1,9 +1,9 @@
-@extends('layout.admin')
+@extends('layouts.admin')
 @section('content')
 <div class="row">
   <div class="col-12">
     <div class="card">
-      <div class="card-header" style="background-color: #39b54a">
+      <div class="card-header" style="background-color: #75A0DC">
         <h2 style="color: white">Data Artikel</h2>
       </div>
       <div class="card-body">

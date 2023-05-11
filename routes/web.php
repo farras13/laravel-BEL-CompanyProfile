@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PaketController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,3 +31,10 @@ route::post('/save-galeri', [App\Http\Controllers\GalleryController::class, 'sto
 route::get('/edit-galeri/{id}', [App\Http\Controllers\GalleryController::class, 'edit']);
 route::post('/update-galeri', [App\Http\Controllers\GalleryController::class, 'update']);
 route::post('/delete-galeri', [App\Http\Controllers\GalleryController::class, 'destroy']);
+
+route::get('/paket', [App\Http\Controllers\PaketController::class, 'index']);
+route::get('/add-paket', [App\Http\Controllers\PaketController::class, 'create']);
+route::post('/save-paket', [App\Http\Controllers\PaketController::class, 'store']);
+route::get('/edit-paket/{id}', [App\Http\Controllers\PaketController::class, 'edit']);
+route::post('/update-paket', [App\Http\Controllers\PaketController::class, 'update']);
+route::post('/delete-paket', [App\Http\Controllers\PaketController::class, 'destroy']);

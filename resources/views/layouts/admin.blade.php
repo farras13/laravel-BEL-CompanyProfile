@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Rajawali Perkasa Logistic - Admin</title>
+  <title>Berkah Ekspressindo Logistik - Admin</title>
   <!-- Favicon -->
-  <link rel="icon" href="{{url('image/logo-icon.png')}}" type="image/png">
+  <link rel="icon" href="{{ url('assets/images/IMG-20230508-WA0009.jpg')}}" type="image/png">
   <!-- Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
@@ -131,9 +131,6 @@
               <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
                 <div class="media align-items-center">
-                  <span class="avatar avatar-sm rounded-circle">
-                    <img alt="" src="{{url('image/user.png')}}">
-                  </span>
                   <div class="media-body  ml-2  d-none d-lg-block">
                     <span class="mb-0 text-sm  font-weight-bold">{{auth()->user()->name}}</span>
                   </div>
