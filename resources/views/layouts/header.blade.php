@@ -9,10 +9,9 @@
         <nav id="navbar" class="navbar order-last order-lg-0">
             <ul>
                 <li><a href="{{ route('home') }}" class="active">Home</a></li>
-                <li><a href="#about">About Us</a></li>
+                <li><a href="#about-us">About Us</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#Gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
 
             </ul>
@@ -28,11 +27,18 @@
         <div class="header-social-links d-flex">
             @guest
                 @if (Route::has('login'))
-                    <b><a href="{{ route('login') }}" class="twitter">Login</i></a></b>
+                    <b><a href="{{ route('login') }}" class="twitter">Login</a></b>
                 @endif
             @else
-                <b><a href="{{ route('logout') }}" class="twitter">Logout</i></a></b>
-            @endif
+                <b><a class="twitter" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                  document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a></b>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                @endif
             </div>
 
         </div>
