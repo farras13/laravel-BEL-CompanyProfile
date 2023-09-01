@@ -47,7 +47,7 @@
                         @guest
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('home') }}"><i class='bx bx-arrow-back'></i>{{ __('Go Back') }}</a>
                                 </li>
                             @endif
                         @else
